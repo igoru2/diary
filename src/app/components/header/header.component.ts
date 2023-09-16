@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  
+  message: string = "Welcome to My Diary!";
+
+  numberOfNotes: number = 0;
+
+  constructor() {
+
+    setTimeout(() => {
+
+      this.numberOfNotes = 15;
+  
+    }, 15000);
+  }
+
+  
 
 }

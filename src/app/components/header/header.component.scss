@@ -1,0 +1,22 @@
+.welcome {
+    color: red;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.open_closed {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+        margin: 20px;
+        width: 20%;
+        height: 100%;
+        background-color: lightskyblue;        
+        border-radius: 15px;   
+        padding: 10px;
+    }
+}

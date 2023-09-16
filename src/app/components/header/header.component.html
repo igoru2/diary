@@ -1,1 +1,13 @@
-<p>header works!</p>
+<div class="welcome">
+    <p>{{message}}</p>  
+</div>
+
+<div class="open_closed">
+    <img src="../../../assets/images/open.png" alt="open" *ngIf="numberOfNotes < 15">
+    <img src="../../../assets/images/closed.png" alt="open" *ngIf="numberOfNotes >= 15">
+</div>
+
+
+
+
+

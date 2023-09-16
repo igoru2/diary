@@ -1,0 +1,9 @@
+<div class="bdiv">
+
+    <input *ngIf="isInputValid" type="text" placeholder="Type your note" [(ngModel)]="myInput">
+
+    <button *ngIf="isButtonValid" class="bt" (click)="saveMe()">Save note!</button>
+    
+    <p *ngFor = "let note of notes" class="notes">Your note is: {{note}}</p>  
+
+</div>
