@@ -3,8 +3,8 @@
 </div>
 
 <div class="open_closed">
-    <img src="../../../assets/images/open.png" alt="open" *ngIf="numberOfNotes < 15">
-    <img src="../../../assets/images/closed.png" alt="open" *ngIf="numberOfNotes >= 15">
+    <img src="../../../assets/images/open.png" alt="open" *ngIf="numberOfNotes > 0">
+    <img src="../../../assets/images/closed.png" alt="closed" *ngIf="numberOfNotes <= 0">
 </div>
 
 

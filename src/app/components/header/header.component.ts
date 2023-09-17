@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-header',
@@ -6,20 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  constructor(private sharedService: SharedService) {};
   
   message: string = "Welcome to My Diary!";
 
-  numberOfNotes: number = 0;
-
-  constructor() {
-
-    setTimeout(() => {
-
-      this.numberOfNotes = 15;
+  numberOfNotes: number = 1;
   
-    }, 15000);
+  ngOnInit() {
+
+    setInterval(() => {
+      
+      this.numberOfNotes = this.sharedService.sharedData;  
+
+    }, 5);
+  
   }
-
-  
 
 }
