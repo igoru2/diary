@@ -8,20 +8,19 @@ import { SharedService } from '../../services/shared.service';
 })
 export class HeaderComponent {
 
-  constructor(private sharedService: SharedService) {};
+  constructor(private sharedService: SharedService) {
+
+    this.sharedService.sharedData$.subscribe((data) => {
+      this.changePicture = data;
+
+    });  
+
+
+  };
   
   message: string = "Welcome to My Diary!";
 
-  numberOfNotes: number = 1;
+  changePicture: number = 1;
   
-  ngOnInit() {
-
-    setInterval(() => {
-      
-      this.numberOfNotes = this.sharedService.sharedData;  
-
-    }, 5);
   
   }
-
-}

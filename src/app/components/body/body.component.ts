@@ -36,7 +36,7 @@ export class BodyComponent {
     this.isInputValid = false;
     this.isButtonValid = false;
   
-    this.sharedService.sharedData = 0;
+    this.sharedService.promeni();
 
   }
 

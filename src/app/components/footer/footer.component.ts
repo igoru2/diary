@@ -8,6 +8,6 @@ import { INote } from 'src/app/models/note.model';
 })
 export class FooterComponent {
 
-  notes: INote[] = [{ text: 'ddd', id: 2342342 }, { text: 'eeeeeeeeeeeeeeeeeeeee', id: 33 }];
+  notes: INote[] = [{ text: 'ddd', id: 2342342 }, { text: 'eeeeee', id: 33 }];
 
 }
