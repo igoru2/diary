@@ -12,26 +12,20 @@ export class BodyComponent {
   constructor(private sharedService: SharedService) { };
 
   isInputValid: boolean = true;
-  isButtonValid: boolean = true;
-
-  
-  id: number = 1;
+  isButtonValid: boolean = true;    
 
   myInput: string = '';
 
-  notes: INote[] = [];
-
+  
   saveMe(): void {
   
-    this.notes.push({ text: this.myInput, id: this.id });  
-    this.id++;
+    this.sharedService.addMe(this.myInput);    
     
     this.myInput = '';
 
   }
 
   completeMe(): void {
-
 
     this.isInputValid = false;
     this.isButtonValid = false;

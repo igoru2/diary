@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { INote } from 'src/app/models/note.model';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,15 @@ import { INote } from 'src/app/models/note.model';
 })
 export class FooterComponent {
 
-  notes: INote[] = [{ text: 'ddd', id: 2342342 }, { text: 'eeeeee', id: 33 }];
+  notes: INote[] = [];
+
+  constructor(private sharedService: SharedService) {
+
+    this.sharedService.sharedNotes$.subscribe((data) => {
+      this.notes = data;
+
+  });
+
+}
 
 }
