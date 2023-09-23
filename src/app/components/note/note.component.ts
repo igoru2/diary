@@ -8,5 +8,7 @@ import { Component, Input } from '@angular/core';
 export class NoteComponent {
 
   @Input() id: number = 0;
+  @Input() text: string = '';
+  @Input() done: boolean = false;
 
 }

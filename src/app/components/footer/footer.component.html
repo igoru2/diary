@@ -2,6 +2,13 @@
     <p>Here you can see all of your notes!</p>
 </div>
 
-<p *ngFor = "let note of notes" class="notes">Your note is: {{ note.text }}</p> 
+<div class="notef">
+    <p>Your note is</p>
+    <p>Your note ID is</p> 
+    <p>Your note status is</p> 
+</div>
 
-<app-note *ngFor="let note of notes" [id]="note.id"></app-note>
+
+<p *ngFor = "let note of notes" class="notes"></p> 
+
+<app-note *ngFor="let note of notes" [id]="note.id" [text]="note.text" [done]="note.done"></app-note>

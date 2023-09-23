@@ -8,7 +8,19 @@
         border-radius: 15px;
         margin: 20px;
         width: 60%;
+        border: none;
+        background-color: lightcyan;
+        cursor: pointer;
+
+        &:focus{
+            border: 2px solid blue;;
+            background-color: aquamarine;
+        }
+
+        
     }
+
+    
     
     button {
         font-size: 18px;

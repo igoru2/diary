@@ -1,12 +1,29 @@
 .fdiv {
     background-color: rgb(161, 161, 10); 
+    margin-bottom: 5px;
+    justify-content: center;
+    padding: 10px;
+
+    p {    
+        color: navy;
+        font-size: 16px;
+        margin-top: 5px;
+        padding: 5px;
+        text-align: center;
+        padding: 5px;
+        font-size: 22px;
+    }
 }
 
 
-p {    
-    color: navy;
-    font-size: 16px;
-    margin-top: 20px;
-    padding: 30px;
-    text-align: center;
+
+
+.notef {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 20px;
 }

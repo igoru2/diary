@@ -26,7 +26,7 @@ export class SharedService {
 
   addMe(data: string) {
     this.id++;
-    this.notes.push({text: data, id: this.id});
+    this.notes.push({text: data, id: this.id, done: false});
     this.sharedNotes$.next(this.notes);
   }
 
