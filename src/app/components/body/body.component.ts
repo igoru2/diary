@@ -12,12 +12,21 @@ export class BodyComponent {
   constructor(private sharedService: SharedService) { };
 
   isInputValid: boolean = true;
-  isButtonValid: boolean = true;    
+  isButtonValid: boolean = true;   
 
   myInput: string = '';
+  
+  er: boolean = false;
 
   
   saveMe(): void {
+
+    if (!this.myInput) {
+      this.er = true;
+      return;
+    }
+
+    this.er = false;
   
     this.sharedService.addMe(this.myInput);    
     

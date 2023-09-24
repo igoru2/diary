@@ -26,7 +26,32 @@ export class SharedService {
 
   addMe(data: string) {
     this.id++;
-    this.notes.push({text: data, id: this.id, done: false});
+    this.notes.push({text: data, id: this.id, changed: false});
+    this.sharedNotes$.next(this.notes);
+  }
+
+  changeMeShared (id: number, newText: string) {
+
+    this.notes = this.notes.map((el) => {
+
+      if (el.id === id) {
+        el.text = newText;
+        el.changed = true;
+      }
+
+      return el;
+
+    });
+
+    this.sharedNotes$.next(this.notes);
+  };
+
+  deleteNote(id: number) {
+
+    this.notes = this.notes.filter((el) => {
+      return el.id !== id;
+    });
+
     this.sharedNotes$.next(this.notes);
   }
 

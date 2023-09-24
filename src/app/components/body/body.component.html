@@ -1,9 +1,9 @@
 <div class="bdiv">
 
-    <input *ngIf="isInputValid" type="text" placeholder="Type your note" [(ngModel)]="myInput">
+    <input *ngIf="isInputValid" type="text" placeholder="Type your note" [(ngModel)]="myInput" [ngClass]="{red: er}">
 
     <button *ngIf="isButtonValid" class="bt" (click)="saveMe()">Save note!</button>
 
-    <button class="btcompleted" (click)="completeMe()">Finish adding notes!</button> 
+    <button class="btcompleted" (click)="completeMe()">{{isInputValid ? 'Finish adding notes!' : 'Have a nice day!'}}</button> 
 
 </div>

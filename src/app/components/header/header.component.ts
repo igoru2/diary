@@ -20,7 +20,6 @@ export class HeaderComponent {
   
   message: string = "Welcome to My Diary!";
 
-  changePicture: number = 1;
-  
+  changePicture: number = 1;   
   
   }

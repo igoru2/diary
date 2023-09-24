@@ -3,12 +3,12 @@
 </div>
 
 <div class="notef">
-    <p>Your note is</p>
-    <p>Your note ID is</p> 
-    <p>Your note status is</p> 
+    <p class="yourNote">Your note</p>
+    <p class="status">Status</p> 
+    <p class="editOrDelete" *ngIf="isButtonValid">Edit or Delete Note</p>
 </div>
 
 
 <p *ngFor = "let note of notes" class="notes"></p> 
 
-<app-note *ngFor="let note of notes" [id]="note.id" [text]="note.text" [done]="note.done"></app-note>
+<app-note *ngFor="let note of notes" [id]="note.id" [text]="note.text" [changed]="note.changed"></app-note>

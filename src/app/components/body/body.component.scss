@@ -1,6 +1,6 @@
 .bdiv {
+    
     height: 100%;
-
 
     input {
         font-weight: 40px;
@@ -17,10 +17,10 @@
             background-color: aquamarine;
         }
 
-        
-    }
-
-    
+        &.red {
+            border: 2px solid red;
+        }        
+    }    
     
     button {
         font-size: 18px;

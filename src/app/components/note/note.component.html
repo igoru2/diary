@@ -1,6 +1,7 @@
 <div class="note">
-    <p>{{ text }}</p>
-    <p>{{ id }}</p> 
-    <p>{{ done }}</p> 
+    <input type = "text" [value]="text" [disabled]="closed" [ngClass] = "{red : err}" #noteRef/>
+    <p>{{ changed? 'Changed' : 'Original' }}</p> 
+    <button *ngIf="isButtonValid" (click)="editMe()">Edit</button>
+    <button *ngIf="isButtonValid" (click) = finishMe(noteRef.value)>Finish</button>
+    <button *ngIf="isButtonValid" (click)="deleteMe()" >Delete</button>
 </div>
-

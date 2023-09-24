@@ -11,13 +11,20 @@ export class FooterComponent {
 
   notes: INote[] = [];
 
+  isButtonValid: number = 1;
+
   constructor(private sharedService: SharedService) {
 
     this.sharedService.sharedNotes$.subscribe((data) => {
       this.notes = data;
 
-  });
+    this.sharedService.sharedData$.subscribe((data) => {
+      this.isButtonValid = data;
+  
+    });  
 
-}
+    });
+
+  }
 
 }

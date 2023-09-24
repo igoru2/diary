@@ -15,9 +15,6 @@
     }
 }
 
-
-
-
 .notef {
     display: flex;
     flex-direction: row;
@@ -26,4 +23,16 @@
     margin-bottom: 5px;
     padding: 10px;
     font-size: 20px;
+
+    .yourNote {
+        flex-grow: 3;
+    }
+
+    .status {
+        flex-grow: 1;
+    }
+
+    .editOrDelete {
+        flex-grow: 1;
+    }
 }
